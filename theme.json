@@ -9,17 +9,27 @@
         {
           "name": "Primary",
           "slug": "primary",
-          "color": "#0EA5E9"
+          "color": "#F7A933"
         },
         {
           "name": "Secondary",
           "slug": "secondary",
-          "color": "#14B8A6"
+          "color": "#525990"
+        },
+        {
+          "name": "Whatsapp",
+          "slug": "whatsapp",
+          "color": "#00D870"
+        },
+        {
+          "name": "Pink",
+          "slug": "pink",
+          "color": "#EC2561"
         },
         {
           "name": "Dark",
           "slug": "dark",
-          "color": "#1F2937"
+          "color": "#292626"
         },
         {
           "name": "Light",

@@ -3,3 +3,272 @@
 @import "tailwindcss/utilities";
 
 @import "custom.css";
+
+/* Header */
+
+ul#menu-menu-primario {
+  align-items: center;
+}
+
+body,
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  #primary-menu {
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    width: 100%;
+    background: #484444;
+    background-image: url("../images/menu-background.png");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+  }
+
+  #primary-menu li.menu-item {
+    color: #f5eee3 !important;
+    margin: 0.5rem 0;
+  }
+
+  #primary-menu li.current-menu-item {
+    color: #f7a933 !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  li.current-menu-item::after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    background-color: #f7a933;
+    border-radius: 999px;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+li.menu-item {
+  font-weight: 600;
+  color: #292626;
+  transition: color 0.3s ease-in-out;
+}
+
+li.current-menu-item {
+  position: relative;
+  color: #f7a933;
+}
+
+.home li.current-menu-item {
+  color: white;
+}
+
+.home li.current-menu-item::after {
+  background-color: white;
+}
+
+li.menu-item:hover {
+  color: #f7a933;
+}
+
+.home li.menu-item:hover {
+  color: white;
+}
+
+li.contato {
+  display: flex;
+}
+
+li.contato a {
+  color: white;
+  background-color: #292626;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 24px;
+  padding: 8px 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  li.contato a {
+    color: white;
+    background-color: #f7a933;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 8px 32px;
+    margin-top: 24px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Home */
+
+section#hero {
+  box-shadow: 0px 20px 40px rgba(247, 169, 51, 0.28);
+}
+
+.podcast-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60%;
+  max-width: 900px;
+  object-fit: cover;
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+    url("../images/podcasts.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .podcast-img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%),
+      url("../images/podcasts.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* Footer */
+
+.footer-contact label {
+  color: #484444;
+}
+
+.footer-contact input,
+.footer-contact textarea {
+  border: 1px solid #484444;
+  padding: 8px 12px;
+  display: flex;
+  border-radius: 8px;
+  width: 100%;
+  margin: 4px 0;
+  outline: none;
+}
+
+.footer-contact p {
+  height: 100%;
+}
+
+.footer-contact input[type="submit"] {
+  background-color: #484444;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 700;
+  height: 100%;
+}
+
+/* Podcasts */
+
+body.podcasts {
+  color: white !important;
+}
+
+body.podcasts li.menu-item {
+  color: white;
+}
+
+body.podcasts li.menu-item:hover {
+  color: #ec2561;
+}
+
+body.podcasts li.current-menu-item::after {
+  background-color: #ec2561;
+}
+
+body.podcasts li.current-menu-item {
+  color: #ec2561;
+}
+
+body.podcasts .title {
+  color: white;
+}
+@media screen and (min-width: 1024px) {
+  body.podcasts .menu-item.contato a {
+    background-color: #ec2561;
+  }
+
+  body.podcasts .menu-item.contato a:hover {
+    background-color: #cf1c52;
+  }
+}
+
+body.podcasts .footer-contact label {
+  color: #e5e4e4;
+}
+
+body.podcasts .site-footer {
+  background-color: transparent !important;
+}
+
+body.podcasts .site-footer h3,
+body.podcasts .site-footer p {
+  color: white !important;
+}
+
+body.podcasts .site-footer hr {
+  border: 1px solid white;
+}
+
+body.podcasts .toggle-icon {
+  color: white;
+}
+
+/* Blog */
+
+.filters input[type="text"] {
+  width: 100%;
+  border: 2px solid #e5e4e4;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.filters ul,
+.filters ul li {
+  width: 100%;
+  padding: 0;
+}
+
+.filters h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #292626;
+}
+
+.filters input[type="submit"] {
+  background-color: #f7a933;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Blog */
+
+.entry-content {
+  color: #292626;
+}
+
+.entry-content p {
+  color: #706969;
+}
